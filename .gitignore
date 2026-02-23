@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# CAP build
+gen/
+.cds-build/
+
+# Logs & temp
+*.log
+*.tmp
+.DS_Store
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# Build artifacts
+dist/
+mta_archives/
+deploy/
+
+# Test
+coverage/
+
+# IDE (optional - keep tasks.json if you use it)
+.vscode/settings.json
