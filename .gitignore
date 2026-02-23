@@ -25,3 +25,6 @@ coverage/
 
 # IDE (optional - keep tasks.json if you use it)
 .vscode/settings.json
+
+# Mock data
+db/data/*.csv
