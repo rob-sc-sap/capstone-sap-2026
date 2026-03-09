@@ -1,0 +1,21 @@
+vendor_id,name,risk_rating,is_compliant,country_country_id
+1,Shenzhen TechCore Ltd,25,true,1
+2,AutoParts Global GmbH,15,true,3
+3,Pacific Electronics Co,30,true,9
+4,Vishay Industrial Supply,20,true,2
+5,Hanwha Precision Parts,22,true,5
+6,Tata Components Ltd,45,true,6
+7,Foxconn Assembly Works,35,true,1
+8,Mitsui Materials Corp,18,true,4
+9,Continental Suppliers AG,12,true,3
+10,Delta Mfg Vietnam,55,false,8
+11,Grupo Monterrey SA,40,true,7
+12,Polskie Czesci SpZOO,28,true,14
+13,Bangkok Industrial Co,50,false,13
+14,Embraer Materials,38,true,10
+15,Ontario Alloys Inc,17,true,12
+16,Istanbul Parts AS,62,false,15
+17,Hanoi Electronics JSC,48,true,8
+18,Renault Components SAS,14,true,11
+19,Yaskawa Robotics,19,true,4
+20,Chennai Electronics Ltd,52,false,6

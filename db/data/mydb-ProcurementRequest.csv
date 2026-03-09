@@ -1,0 +1,26 @@
+request_id,requested_qty,status,raised_by,created_at,product_product_id
+1,500,approved,J. Martinez,2024-01-10T08:00:00.000Z,1
+2,80,fulfilled,S. Kumar,2023-11-05T08:00:00.000Z,9
+3,250,pending,M. Chen,2024-03-22T08:00:00.000Z,5
+4,1500,approved,R. Okonkwo,2024-02-14T08:00:00.000Z,16
+5,3000,rejected,P. Dubois,2023-10-30T08:00:00.000Z,4
+6,300,fulfilled,T. Nakamura,2023-09-18T08:00:00.000Z,13
+7,120,approved,L. Garcia,2024-01-28T08:00:00.000Z,8
+8,60,pending,J. Martinez,2024-04-05T08:00:00.000Z,15
+9,4000,fulfilled,A. Singh,2023-08-12T08:00:00.000Z,3
+10,6000,approved,C. Weber,2024-02-01T08:00:00.000Z,20
+11,90,pending,S. Kumar,2024-04-18T08:00:00.000Z,9
+12,800,fulfilled,M. Chen,2023-07-25T08:00:00.000Z,1
+13,150,approved,B. Kowalski,2024-03-10T08:00:00.000Z,17
+14,5000,rejected,D. Ferreira,2023-12-02T08:00:00.000Z,18
+15,400,pending,T. Nakamura,2024-04-29T08:00:00.000Z,24
+16,200,approved,E. Laurent,2024-01-15T08:00:00.000Z,2
+17,1200,fulfilled,H. Yamamoto,2023-06-20T08:00:00.000Z,7
+18,1000,approved,A. Singh,2024-02-28T08:00:00.000Z,12
+19,100,pending,R. Okonkwo,2024-05-03T08:00:00.000Z,10
+20,350,fulfilled,J. Martinez,2023-10-08T08:00:00.000Z,13
+21,2000,approved,C. Weber,2024-03-15T08:00:00.000Z,18
+22,75,pending,L. Garcia,2024-05-10T08:00:00.000Z,22
+23,500,approved,P. Dubois,2024-02-20T08:00:00.000Z,19
+24,180,fulfilled,B. Kowalski,2023-11-14T08:00:00.000Z,14
+25,650,approved,E. Laurent,2024-03-05T08:00:00.000Z,6

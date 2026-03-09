@@ -1,0 +1,21 @@
+comment_id,author_id,text_content,created_at,approval_log_log_id,contract_contract_id,request_request_id,vendor_vendor_id
+1,jmartinez,Lead time acceptable but MOQ above Q1 forecast. Negotiating reduction with vendor.,2024-01-13T08:00:00.000Z,1,1,1,1
+2,jmartinez,Finance approved. Lock in price before CNY tariff review in Q2.,2024-01-15T08:00:00.000Z,2,1,1,1
+3,skumar,ECM delivery confirmed on schedule. Vendor passed quality gate.,2023-11-07T08:00:00.000Z,3,7,2,2
+4,skumar,Finance sign-off received. PO can be issued.,2023-11-09T08:00:00.000Z,4,7,2,2
+5,mchen,PCB Assembly quote submitted. Awaiting supply planner review.,2024-03-24T08:00:00.000Z,5,2,3,1
+6,rokonkwo,Battery cell allocation approved. Foxconn capacity confirmed at 200K units per month.,2024-02-16T08:00:00.000Z,6,5,4,7
+7,rokonkwo,Finance cleared for Q2 production ramp. Proceed with PO.,2024-02-19T08:00:00.000Z,7,5,4,7
+8,pdubois,Steel sheet order denied. US domestic sourcing required per compliance policy.,2023-10-31T08:00:00.000Z,8,10,5,4
+9,tnakamura,Servo motor delivery completed. OTIF score 94% over prior 12 months.,2023-09-20T08:00:00.000Z,9,15,6,5
+10,tnakamura,Finance approved. Preferred vendor status confirmed for Hanwha.,2023-09-22T08:00:00.000Z,10,15,6,5
+11,lgarcia,OLED Display quote from Pacific Electronics meets spec. Lead time 28 days acceptable.,2024-01-31T08:00:00.000Z,11,3,7,3
+12,jmartinez,Gearbox request under evaluation. Only Mitsui is qualified for this spec.,2024-04-07T08:00:00.000Z,13,13,8,8
+13,asingh,Ball bearing bulk order fulfilled. Split sourcing between Vishay and Embraer.,2023-08-14T08:00:00.000Z,14,23,9,4
+14,cweber,High-volume bolt order approved. Tata Components selected on cost.,2024-02-03T08:00:00.000Z,16,17,10,6
+15,cweber,Compliance officer cleared Tata for continued use despite elevated risk rating.,2024-02-06T08:00:00.000Z,17,17,10,6
+16,mchen,Microcontroller re-order fulfilled within SLA. Shenzhen TechCore maintaining performance.,2023-07-27T08:00:00.000Z,19,1,12,1
+17,bkowalski,Pneumatic cylinder sourced from Poland. Meets EU RoHS directive.,2024-03-12T08:00:00.000Z,21,19,13,12
+18,dferreira,Polypropylene order rejected. Delta Vietnam failed compliance audit this period.,2023-12-04T08:00:00.000Z,22,25,14,10
+19,elaurent,Power supply order approved. Renault Components meets automotive grade spec.,2024-01-17T08:00:00.000Z,24,21,16,18
+20,hyamamoto,Aluminum extrusion fulfilled via Ontario Alloys. USMCA duty-free confirmed.,2023-06-22T08:00:00.000Z,26,11,17,15

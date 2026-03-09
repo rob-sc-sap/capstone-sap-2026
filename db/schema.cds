@@ -1,226 +1,183 @@
-using { cuid, managed } from '@sap/cds/common';
+namespace mydb;
 
-namespace sap.vendoropt;
+// -------------------------------------------------------
+// Master Data
+// -------------------------------------------------------
 
-// ─── ENUMS ──────────────────────────────────────────────────────────────────
-
-type CurrencyCode : String(3) enum {
-  USD;
-  EUR;
-  INR;
-  GBP;
-  JPY;
+entity Product {
+  key product_id         : Integer;
+      name               : String(45) not null;
+      category           : String(45);
+      safety_stock_level : Double;
 }
 
-type RequestStatus : String(20) enum {
-  PENDING_BUDGET;
-  BUDGET_APPROVED;
-  IN_SOURCING;
-  PENDING_APPROVAL;
-  APPROVED;
-  PO_CREATED;
-  CANCELLED;
+entity Country {
+  key country_id   : Integer;
+      country_name : String(45) not null;
 }
 
-type ApprovalStage : String(30) enum {
-  BUDGET;
-  VENDOR_RECOMMENDATION;
-  RISK;
-  CONTRACT;
+// -------------------------------------------------------
+// Vendor & Contracts
+// -------------------------------------------------------
+
+entity Vendor {
+  key vendor_id    : Integer;
+      name         : String(45) not null;
+      risk_rating  : Integer;
+      is_compliant : Boolean;
+      country      : Association to Country;
 }
 
-type ApprovalDecision : String(10) enum {
-  PENDING;
-  APPROVED;
-  REJECTED;
+entity VendorContract {
+  key contract_id            : Integer;
+      start_date             : DateTime not null;
+      end_date               : DateTime;
+      minimum_order_quantity : Integer;
+      volume_discount_tiers  : LargeString;
+      penalty_clause         : String(45);
+      contract_pdf           : LargeBinary;
+      vendor                 : Association to Vendor;
+      product                : Association to Product;
 }
 
-type ObjectiveFunction : String(20) enum {
-  MINIMIZE_COST;
-  BALANCE_RISK;
-  MINIMIZE_LEAD_TIME;
+entity VendorQuote {
+  key quote_id       : Integer;
+      unit_price     : Double not null;
+      capacity_limit : Integer;
+      lead_time_days : Integer;
+      currency       : String(45);
+      vendor         : Association to Vendor;
+      contract       : Association to VendorContract;
+      product        : Association to Product;
 }
 
-type AgentActionStatus : String(10) enum {
-  SUCCESS;
-  FAILED;
-  SKIPPED;
+// -------------------------------------------------------
+// Tariffs & KPIs
+// -------------------------------------------------------
+
+entity Tariff {
+  key tariff_id           : Integer;
+      current_tariff_rate : Double not null;
+      effective_date      : DateTime;
+      expiring_date       : DateTime;
+      country             : Association to Country;
+      product             : Association to Product;
 }
 
-// ─── MASTER DATA ────────────────────────────────────────────────────────────
-
-/**
- * Raw materials or components being sourced.
- * safetystocklevel is the automated trigger point for future auto-initiation.
- */
-entity Product : cuid {
-  name             : String  @mandatory;
-  category         : String;
-  safetystocklevel : Double  default 0;
+entity KPI_profile {
+  key kpi_id        : Integer;
+      otif_score    : Double;
+      logistic_cost : Double;
+      last_updated  : DateTime;
+      vendor        : Association to Vendor;
+      tariff        : Association to Tariff;
 }
 
-/**
- * Approved supplier registry.
- * isCompliant and riskRating are used by agent for auto-filtering.
- */
-entity Vendor : cuid {
-  name        : String   @mandatory;
-  country     : String;
-  riskRating  : Integer  default 3;   // 1=Low Risk, 5=High Risk
-  isCompliant : Boolean  default true;
+// -------------------------------------------------------
+// Procurement
+// -------------------------------------------------------
+
+entity ProcurementRequest {
+  key request_id    : Integer;
+      requested_qty : Integer not null;
+      status        : String(10);  // pending | approved | rejected | fulfilled
+      raised_by     : String(45) not null;
+      created_at    : DateTime;
+      product       : Association to Product;
 }
 
-/**
- * 1-to-1 with Vendor.
- * Agent periodically refreshes this and fires alerts if KPIs degrade post-PO.
- */
-entity KPIProfile : cuid {
-  vendor           : Association to Vendor  @mandatory;
-  otifScore        : Double;               // On-Time In-Full %, higher is better
-  currentTariffRate: Double;               // Current applicable tariff %
-  logisticsCost    : Double;               // Cost of logistics per unit
-  lastUpdated      : Timestamp             default $now;
+entity ApprovalLog {
+  key log_id     : Integer;
+      stage      : String(15) not null;  // processing | complete
+      actor_role : String(45) not null;
+      decision   : String(10);           // denied | complete | pending
+      decided_at : DateTime;
+      request    : Association to ProcurementRequest;
 }
 
-/**
- * Active contract terms per vendor-product pair.
- * Agent uses MOQ and discount tiers during optimization to calculate true effective cost.
- */
-entity VendorContract : cuid {
-  vendor              : Association to Vendor    @mandatory;
-  product             : Association to Product   @mandatory;
-  startDate           : Date                     @mandatory;
-  endDate             : Date;
-  minimumOrderQty     : Integer;                 // Agent must not allocate below this value
-  volumeDiscountTiers : LargeString;             // JSON e.g. [{"min_qty":500,"discount":0.05}]
-  penaltyClause       : String;
+entity PlannerComment {
+  key comment_id   : Integer;
+      author_id    : String(45);
+      text_content : LargeString;
+      created_at   : DateTime;
+      approval_log : Association to ApprovalLog;
+      contract     : Association to VendorContract;
+      request      : Association to ProcurementRequest;
+      vendor       : Association to Vendor;
 }
 
-// ─── PROCUREMENT TRIGGER ────────────────────────────────────────────────────
+// -------------------------------------------------------
+// Optimization & Allocation
+// -------------------------------------------------------
 
-/**
- * Root trigger for the entire procurement workflow.
- * MVP = manually raised. Future = auto-triggered when current_stock < safetystocklevel.
- */
-entity ProcurementRequest : cuid {
-  product      : Association to Product  @mandatory;
-  requestedQty : Integer                 @mandatory;
-  status       : RequestStatus           default #PENDING_BUDGET;
-  raisedBy     : String                  @mandatory;  // User ID of Business actor
-  createdAt    : Timestamp               default $now;
+entity OptimizationScenario {
+  key scenario_id        : Integer;
+      tariff_multiplier  : Double;
+      capacity_delta     : Double;
+      objective_function : String(45);
+      created_at         : DateTime;  // snapshot — tariffs can change daily
+      request            : Association to ProcurementRequest;
+      quote              : Association to VendorQuote;
 }
 
-// ─── HUMAN-IN-THE-LOOP GATES ────────────────────────────────────────────────
-
-/**
- * Immutable audit trail of every human decision.
- * Joule reads decision=APPROVED to advance the workflow.
- * One row per stage per request.
- */
-entity ApprovalLog : cuid {
-  request   : Association to ProcurementRequest  @mandatory;
-  stage     : ApprovalStage                      @mandatory;
-  actorRole : String                             @mandatory;  // Finance | Business | Risk | Legal
-  decision  : ApprovalDecision                   default #PENDING;
-  comments  : String;
-  decidedAt : Timestamp;
+entity AllocationResult {
+  key allocation_id       : Integer;
+      allocated_quantity  : Integer not null;
+      total_effective_cost: Double;
+      rationale_summary   : LargeString;
+      created_at          : DateTime;
+      suggested_by_agent  : Boolean;
+      scenario            : Association to OptimizationScenario;
+      vendor              : Association to Vendor;
+      product             : Association to Product;
 }
 
-// ─── SOURCING & QUOTES ──────────────────────────────────────────────────────
-
-/**
- * A vendor bid for a specific product.
- * Optionally linked to a VendorContract so agent can apply MOQ and discount logic.
- */
-entity VendorQuote : cuid {
-  vendor        : Association to Vendor           @mandatory;
-  product       : Association to Product          @mandatory;
-  contract      : Association to VendorContract;  // Optional — links to active contract terms
-  unitPrice     : Double                          @mandatory;
-  capacityLimit : Integer;                        // Max units this vendor can supply
-  leadTimeDays  : Integer;
-  currency      : CurrencyCode                    default #USD;
+entity DecisionOverride {
+  key override_id  : Integer;
+      overridden_by: String(45) not null;
+      new_quantity : Integer not null;
+      created_at   : DateTime;
+      reason_code  : String(45);
+      allocation   : Association to AllocationResult;
 }
 
-// ─── OPTIMIZATION ───────────────────────────────────────────────────────────
-
-/**
- * Configuration for a single agent solver run.
- * Linked to a ProcurementRequest so the full chain is traceable.
- */
-entity OptimizationScenario : cuid {
-  request           : Association to ProcurementRequest  @mandatory;
-  quote             : Association to VendorQuote          @mandatory;
-  tariffMultiplier  : Double                              default 1.0;
-  capacityDelta     : Double                              default 0;
-  objectiveFunction : ObjectiveFunction                   default #MINIMIZE_COST;
-  createdAt         : Timestamp                           default $now;
+entity PurchaseOrder {
+  key po_id            : Integer;
+      po_pdf           : LargeBinary;
+      received_date    : DateTime;
+      product_quantity : Integer;
+      po_total         : Double;
+      allocation       : Association to AllocationResult;
+      product          : Association to Product;
+      vendor           : Association to Vendor;
 }
 
-/**
- * One row per vendor-product pair in the split.
- * Surfaced to Business for VENDOR_RECOMMENDATION approval gate.
- */
-entity AllocationResult : cuid {
-  scenario           : Association to OptimizationScenario  @mandatory;
-  vendor             : Association to Vendor                 @mandatory;
-  product            : Association to Product                @mandatory;
-  allocatedQuantity  : Integer                               @mandatory;
-  totalEffectiveCost : Double;   // unit_price * qty + logistics + tariff (discounts applied)
-  rationaleSummary   : String;   // Agent-generated explanation for Business approval
-  createdAt          : Timestamp default $now;
+// -------------------------------------------------------
+// Agent / AI Workflow
+// -------------------------------------------------------
+
+entity AgentContext {
+  key session_id        : Integer;
+      active_constraints: LargeString;  // stored as JSON string
+      last_action       : String(45);
+      updated_at        : DateTime;
+      request           : Association to ProcurementRequest;
 }
 
-// ─── FEEDBACK & OVERRIDE LOOP ───────────────────────────────────────────────
-
-/**
- * Human feedback on agent decisions.
- * Agent reads this to avoid repeating rejected suggestions in future scenarios.
- */
-entity PlannerComment : cuid {
-  request      : Association to ProcurementRequest  @mandatory;
-  authorId     : String                             @mandatory;
-  linkedEntity : String                             @mandatory;  // Table name e.g. AllocationResult
-  linkedId     : String                             @mandatory;  // Specific record ID
-  textContent  : String                             @mandatory;
-  createdAt    : Timestamp                          default $now;
+entity AgentActionLog {
+  key action_id   : Integer;
+      action_type : String(25);  // suggested_allocation | query_vendor | override_check
+      status      : String(10);  // pending | success | failed | skipped
+      timestamp   : DateTime;
+      context     : Association to AgentContext;
 }
 
-/**
- * Records when a human manually changes an agent-generated allocation.
- * Agent uses this as a training signal to adjust future scenario weighting.
- */
-entity DecisionOverride : cuid {
-  originalAllocation : Association to AllocationResult  @mandatory;
-  overriddenBy       : String                           @mandatory;
-  newQuantity        : Integer                          @mandatory;
-  overrideReasonCode : String;  // e.g. PREFERRED_VENDOR, BUDGET_CAP, RELATIONSHIP, COMPLIANCE
-  createdAt          : Timestamp                        default $now;
-}
-
-// ─── AGENT SESSION STATE ────────────────────────────────────────────────────
-
-/**
- * Lightweight session state for Joule. One active session per ProcurementRequest.
- * Joule handles agent logic; CAP stores state here.
- */
-entity AgentContext : cuid {
-  request           : Association to ProcurementRequest  @mandatory;
-  allocation        : Association to AllocationResult;
-  activeConstraints : LargeString;  // JSON e.g. {"max_risk_rating":3,"preferred_countries":["IN"]}
-  lastAction        : String;       // e.g. QUOTES_FETCHED, SOLVER_RAN
-  updatedAt         : Timestamp     default $now;
-}
-
-/**
- * Audit log of every autonomous agent action.
- * Pairs with ApprovalLog to give the full human + agent activity history.
- */
-entity AgentActionLog : cuid {
-  session    : Association to AgentContext  @mandatory;
-  actionType : String                       @mandatory;  // e.g. FETCH_QUOTES, RUN_SOLVER, FLAG_RISK
-  status     : AgentActionStatus            default #SUCCESS;
-  inputRef   : String;   // ID of the record the agent acted on
-  outputRef  : String;   // ID of the record the agent produced
-  timestamp  : Timestamp default $now;
+entity AgentActionReference {
+  key reference_id  : Integer;
+      direction     : String(10);   // input | output
+      ref_type      : String(45);   // e.g. vendor_quote, kpi_profile, allocation_result
+      ref_id        : String(45);
+      snapshot_data : LargeString;
+      created_at    : DateTime;
+      action        : Association to AgentActionLog;
 }

@@ -1,0 +1,26 @@
+product_id,name,category,safety_stock_level
+1,Microcontroller STM32F4,Electronics,150.0
+2,Power Supply Unit 500W,Electronics,80.0
+3,Ball Bearing 6205,Industrial Components,300.0
+4,Steel Sheet 3mm,Raw Materials,500.0
+5,PCB Assembly Rev3,Electronics,120.0
+6,Hydraulic Pump P20,Industrial Components,50.0
+7,Aluminum Extrusion T-slot,Raw Materials,400.0
+8,OLED Display 7in,Electronics,90.0
+9,Engine Control Module,Automotive,60.0
+10,Brake Caliper Assembly,Automotive,75.0
+11,Epoxy Resin Type A,Chemical,200.0
+12,Copper Wire 16AWG,Raw Materials,350.0
+13,Servo Motor 24V,Electronics,100.0
+14,Industrial Filter F5,Industrial Components,180.0
+15,Gearbox 1:10 Ratio,Industrial Components,45.0
+16,Lithium Battery Cell,Electronics,250.0
+17,Pneumatic Cylinder 50mm,Industrial Components,130.0
+18,Polypropylene Pellets,Chemical,600.0
+19,LED Driver Module,Electronics,110.0
+20,Stainless Steel Bolt M8,Raw Materials,800.0
+21,Injection Mold Tool,Industrial Components,15.0
+22,Oxygen Sensor Lambda,Automotive,85.0
+23,Titanium Alloy Plate,Raw Materials,40.0
+24,CAN Bus Controller,Electronics,95.0
+25,Rubber Seal Kit,Industrial Components,220.0
