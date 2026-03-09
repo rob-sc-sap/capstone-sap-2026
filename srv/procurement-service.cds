@@ -15,7 +15,6 @@ service ProcurementService {
     entity OptimizationScenario as projection on mydb.OptimizationScenario;
     entity AllocationResult as projection on mydb.AllocationResult;
     entity DecisionOverride as projection on mydb.DecisionOverride;
-    entity PurchaseOrder as projection on mydb.PurchaseOrder;
     entity AgentContext as projection on mydb.AgentContext;
     entity AgentActionLog as projection on mydb.AgentActionLog;
     entity AgentActionReference as projection on mydb.AgentActionReference;
