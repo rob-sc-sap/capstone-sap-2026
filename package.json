@@ -35,7 +35,12 @@
   "cds": {
     "requires": {
       "db": {
-        "kind": "hana"
+        "[production]": {
+          "kind": "hana"
+        },
+        "[default]": {
+          "kind": "sqlite"
+        }
       },
       "GENERATIVE_AI_HUB": {
         "kind": "rest",
