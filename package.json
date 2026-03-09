@@ -8,12 +8,14 @@
     "@sap-cloud-sdk/http-client": "^4.5.1",
     "@sap-cloud-sdk/resilience": "^4.5.1",
     "@sap/cds": "^9",
-    "express": "^4"
+    "express": "^4",
+    "@sap/xssec": "^4"
   },
   "devDependencies": {
     "@cap-js/cds-typer": ">=0.1",
     "@cap-js/cds-types": "^0.15.0",
     "@cap-js/sqlite": "^2",
+    "@sap/cds-dk": "^9",
     "@types/node": "^24.0.0",
     "tsx": "^4",
     "typescript": "^5"
@@ -26,9 +28,7 @@
     "requires": {
       "db": {
         "kind": "hana"
-      }
-    },
-    "requires": {
+      },
       "GENERATIVE_AI_HUB": {
         "kind": "rest",
         "credentials": {
@@ -39,6 +39,9 @@
         "RPT1_SMALL_DEPLOYMENT_ID": "d59a9f3f253879d9",
         "RESOURCE_GROUP_ID": "default",
         "API_VERSION": "2024-10-21"
+      },
+      "[production]": {
+        "auth": "xsuaa"
       }
     }
   },

@@ -14,5 +14,5 @@ entity Tarriffs {
     effectiveDate: DateTime;
     expiringDate: DateTime;
     countryName: String;
-    product: Association to many Products;
+    product: Association to many Products on product.tarriff = $self;
 }
