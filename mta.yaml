@@ -50,6 +50,8 @@ modules:
             TokenServiceInstanceName: vendor-selection-auth
             TokenServiceKeyName: vendor-selection-auth-key
             sap.cloud.service: vendorselection.service
+            sap.applicationdevelopment.actions.enabled: true
+            sap.build.usage: CAP
         existing_destinations_policy: update
   build-parameters:
     no-source: true
