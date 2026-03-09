@@ -3,28 +3,46 @@ node_modules/
 
 # CAP build
 gen/
+_out
+*.db
+*.sqlite
 .cds-build/
+target/
 
 # Logs & temp
 *.log
 *.tmp
 .DS_Store
+*.orig
 
 # Environment & secrets
 .env
 .env.*
 !.env.example
+connection.properties
+default-*.json
+.cdsrc-private.json
 
 # Build artifacts
 dist/
 mta_archives/
 deploy/
+*_mta_build_tmp
+*.mtar
 
 # Test
 coverage/
 
-# IDE (optional - keep tasks.json if you use it)
+# IDE
 .vscode/settings.json
+*.iml
+*.flattened-pom.xml
+# .vscode
+# .idea
 
-# # Mock data
-# db/data/*.csv
+# Web IDE, App Studio
+.che/
+.gen/
+
+# @cap-js/cds-typer
+@cds-models
