@@ -4,11 +4,19 @@
   "description": "A simple CAP project.",
   "dependencies": {
     "@cap-js/hana": "^2",
+    "@sap-cloud-sdk/connectivity": "^4.5.1",
+    "@sap-cloud-sdk/http-client": "^4.5.1",
+    "@sap-cloud-sdk/resilience": "^4.5.1",
     "@sap/cds": "^9",
     "express": "^4"
   },
   "devDependencies": {
-    "@cap-js/sqlite": "^2"
+    "@cap-js/cds-typer": ">=0.1",
+    "@cap-js/cds-types": "^0.15.0",
+    "@cap-js/sqlite": "^2",
+    "@types/node": "^24.0.0",
+    "tsx": "^4",
+    "typescript": "^5"
   },
   "scripts": {
     "start": "cds-serve"
@@ -19,6 +27,22 @@
       "db": {
         "kind": "hana"
       }
+    },
+    "requires": {
+      "GENERATIVE_AI_HUB": {
+        "kind": "rest",
+        "credentials": {
+          "destination": "AI_CORE",
+          "requestTimeout": "300000"
+        },
+        "GPT5_DEPLOYMENT_ID": "da6fb5aa5dddb67e",
+        "RPT1_SMALL_DEPLOYMENT_ID": "d59a9f3f253879d9",
+        "RESOURCE_GROUP_ID": "default",
+        "API_VERSION": "2024-10-21"
+      }
     }
+  },
+  "imports": {
+    "#cds-models/*": "./@cds-models/*/index.js"
   }
 }
