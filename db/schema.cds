@@ -8,7 +8,8 @@ entity Product {
   key product_id         : Integer;
       name               : String(45) not null;
       category           : String(45);
-      safety_stock_level : Double;
+      safety_stock_level  : Double;
+      current_stock_level : Double;
 }
 
 entity Country {
