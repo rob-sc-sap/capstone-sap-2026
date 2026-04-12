@@ -1,41 +1,25 @@
-# Vendor Selection Optimization
+# Getting Started
 
-AI-powered vendor selection system built on the SAP Business Technology Platform.
+Welcome to your new project.
 
-**Team StackUnderflow (#6)** — Francisco Martinez, Kush Dang, Harsh Deodhar, Amritsai Sivasubramanian
+It contains these folders and files, following our recommended project layout:
 
----
+File or Folder | Purpose
+---------|----------
+`app/` | content for UI frontends goes here
+`db/` | your domain models and data go here
+`srv/` | your service models and code go here
+`package.json` | project metadata and configuration
+`readme.md` | this getting started guide
 
-## Prerequisites
 
-- Node.js v18+
-- npm v9+
-- SAP CAP CLI: `npm install -g @sap/cds-dk`
+## Next Steps
 
----
+- Open a new terminal and run `cds watch`
+- (in VS Code simply choose _**Terminal** > Run Task > cds watch_)
+- Start adding content, for example, a [db/schema.cds](db/schema.cds).
 
-## Installation
 
-```bash
-git clone https://github.com/rob-sc-sap/capstone-sap-2026.git
-cd capstone-sap-2026
-npm install
-```
+## Learn More
 
----
-
-## Running Locally
-
-```bash
-cds watch
-```
-
-The app runs at `http://localhost:4004`. CAP uses an in-memory SQLite database by default — no SAP HANA setup required for local development.
-
----
-
-## Running Tests
-
-```bash
-npm test
-```
+Learn more at https://cap.cloud.sap/docs/get-started/.
