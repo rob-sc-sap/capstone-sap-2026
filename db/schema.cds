@@ -158,6 +158,20 @@ entity PurchaseOrder {
       vendor                 : Association to Vendor;
 }
 
+entity ProcurementIssue {
+  key issue_id      : Integer;
+      issue_type    : String(20) not null;  // delay | cancellation | quantity_mismatch
+      status        : String(15) not null;  // open | in_progress | resolved
+      description   : LargeString;
+      created_at    : DateTime;
+      resolved_at   : DateTime;
+      resolved_by   : String(10);           // agent | human
+      notes         : LargeString;
+      purchase_order: Association to PurchaseOrder;
+      allocation    : Association to AllocationResult;
+      vendor        : Association to Vendor;
+}
+
 // -------------------------------------------------------
 // Agent / AI Workflow
 // -------------------------------------------------------
