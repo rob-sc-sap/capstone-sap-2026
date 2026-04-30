@@ -22,11 +22,13 @@ entity Country {
 // -------------------------------------------------------
 
 entity Vendor {
-  key vendor_id    : Integer;
-      name         : String(45) not null;
-      risk_rating  : Integer;
-      is_compliant : Boolean;
-      country      : Association to Country;
+  key vendor_id     : Integer;
+      name          : String(45) not null;
+      risk_rating   : Integer;
+      is_compliant  : Boolean;
+      contact_name  : String(45);
+      contact_email : String(100);
+      country       : Association to Country;
 }
 
 entity VendorContract {
@@ -143,14 +145,17 @@ entity DecisionOverride {
 }
 
 entity PurchaseOrder {
-  key po_id            : Integer;
-      po_pdf           : LargeBinary;
-      received_date    : DateTime;
-      product_quantity : Integer;
-      po_total         : Double;
-      allocation       : Association to AllocationResult;
-      product          : Association to Product;
-      vendor           : Association to Vendor;
+  key po_id                  : Integer;
+      status                 : String(15);  // active | delayed | cancelled | resolved
+      po_pdf                 : LargeBinary;
+      expected_delivery_date : DateTime;
+      received_date          : DateTime;
+      disruption_reason      : String(200);
+      product_quantity       : Integer;
+      po_total               : Double;
+      allocation             : Association to AllocationResult;
+      product                : Association to Product;
+      vendor                 : Association to Vendor;
 }
 
 // -------------------------------------------------------
