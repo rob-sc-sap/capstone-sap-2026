@@ -1,21 +1,21 @@
-vendor_id,name,risk_rating,is_compliant,contact_name,contact_email,country_country_id
-1,Shenzhen TechCore Ltd,25,true,Wei Zhang,w.zhang@shenzhen-techcore.com,1
-2,AutoParts Global GmbH,15,true,Klaus Hoffmann,k.hoffmann@autoparts-global.de,3
-3,Pacific Electronics Co,30,true,David Park,d.park@pacific-electronics.com,9
-4,Vishay Industrial Supply,20,true,Anita Sharma,a.sharma@vishay-industrial.com,2
-5,Hanwha Precision Parts,22,true,Ji-woo Kim,j.kim@hanwha-precision.kr,5
-6,Tata Components Ltd,45,true,Ravi Menon,r.menon@tata-components.in,6
-7,Foxconn Assembly Works,35,true,Linda Chen,l.chen@foxconn-assembly.com,1
-8,Mitsui Materials Corp,18,true,Hiroshi Tanaka,h.tanaka@mitsui-materials.jp,4
-9,Continental Suppliers AG,12,true,Eva Müller,e.muller@continental-suppliers.ch,3
-10,Delta Mfg Vietnam,55,false,Nguyen Thi Lan,n.lan@delta-mfg.vn,8
-11,Grupo Monterrey SA,40,true,Carlos Reyes,c.reyes@grupo-monterrey.mx,7
-12,Polskie Czesci SpZOO,28,true,Marek Kowalski,m.kowalski@polskie-czesci.pl,14
-13,Bangkok Industrial Co,50,false,Somchai Prateep,s.prateep@bangkok-industrial.th,13
-14,Embraer Materials,38,true,Fernanda Lima,f.lima@embraer-materials.br,10
-15,Ontario Alloys Inc,17,true,Michael Carter,m.carter@ontario-alloys.ca,12
-16,Istanbul Parts AS,62,false,Ahmet Yilmaz,a.yilmaz@istanbul-parts.tr,15
-17,Hanoi Electronics JSC,48,true,Pham Van Duc,p.duc@hanoi-electronics.vn,8
-18,Renault Components SAS,14,true,Sophie Leblanc,s.leblanc@renault-components.fr,11
-19,Yaskawa Robotics,19,true,Kenji Mori,k.mori@yaskawa-robotics.jp,4
-20,Chennai Electronics Ltd,52,false,Suresh Babu,s.babu@chennai-electronics.in,6
+vendor_id,name,risk_rating,is_compliant,contact_name,contact_email,country_country_id,product_product_id
+1,Shenzhen TechCore Ltd,25,true,Wei Zhang,w.zhang@shenzhen-techcore.com,1,1
+2,AutoParts Global GmbH,15,true,Klaus Hoffmann,k.hoffmann@autoparts-global.de,3,10
+3,Pacific Electronics Co,30,true,David Park,d.park@pacific-electronics.com,9,5
+4,Vishay Industrial Supply,20,true,Anita Sharma,a.sharma@vishay-industrial.com,2,19
+5,Hanwha Precision Parts,22,true,Ji-woo Kim,j.kim@hanwha-precision.kr,5,15
+6,Tata Components Ltd,45,true,Ravi Menon,r.menon@tata-components.in,6,12
+7,Foxconn Assembly Works,35,true,Linda Chen,l.chen@foxconn-assembly.com,1,24
+8,Mitsui Materials Corp,18,true,Hiroshi Tanaka,h.tanaka@mitsui-materials.jp,4,23
+9,Continental Suppliers AG,12,true,Eva Müller,e.muller@continental-suppliers.ch,3,9
+10,Delta Mfg Vietnam,55,false,Nguyen Thi Lan,n.lan@delta-mfg.vn,8,21
+11,Grupo Monterrey SA,40,true,Carlos Reyes,c.reyes@grupo-monterrey.mx,7,4
+12,Polskie Czesci SpZOO,28,true,Marek Kowalski,m.kowalski@polskie-czesci.pl,14,3
+13,Bangkok Industrial Co,50,false,Somchai Prateep,s.prateep@bangkok-industrial.th,13,14
+14,Embraer Materials,38,true,Fernanda Lima,f.lima@embraer-materials.br,10,11
+15,Ontario Alloys Inc,17,true,Michael Carter,m.carter@ontario-alloys.ca,12,20
+16,Istanbul Parts AS,62,false,Ahmet Yilmaz,a.yilmaz@istanbul-parts.tr,15,17
+17,Hanoi Electronics JSC,48,true,Pham Van Duc,p.duc@hanoi-electronics.vn,8,8
+18,Renault Components SAS,14,true,Sophie Leblanc,s.leblanc@renault-components.fr,11,22
+19,Yaskawa Robotics,19,true,Kenji Mori,k.mori@yaskawa-robotics.jp,4,13
+20,Chennai Electronics Ltd,52,false,Suresh Babu,s.babu@chennai-electronics.in,6,16
