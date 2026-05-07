@@ -1,7 +1,7 @@
 vendor_id,name,risk_rating,is_compliant,contact_name,contact_email,country_country_id,product_product_id
-1,Shenzhen TechCore Ltd,25,true,Wei Zhang,w.zhang@shenzhen-techcore.com,1,1
-2,AutoParts Global GmbH,15,true,Klaus Hoffmann,k.hoffmann@autoparts-global.de,3,10
-3,Pacific Electronics Co,30,true,David Park,d.park@pacific-electronics.com,9,5
+1,Shenzhen TechCore Ltd,25,true,Wei Zhang,w.zhang@shenzhen-techcore.com,1,6
+2,AutoParts Global GmbH,15,true,Klaus Hoffmann,k.hoffmann@autoparts-global.de,3,6
+3,Pacific Electronics Co,30,true,David Park,d.park@pacific-electronics.com,9,8
 4,Vishay Industrial Supply,20,true,Anita Sharma,a.sharma@vishay-industrial.com,2,19
 5,Hanwha Precision Parts,22,true,Ji-woo Kim,j.kim@hanwha-precision.kr,5,15
 6,Tata Components Ltd,45,true,Ravi Menon,r.menon@tata-components.in,6,12
@@ -18,4 +18,4 @@ vendor_id,name,risk_rating,is_compliant,contact_name,contact_email,country_count
 17,Hanoi Electronics JSC,48,true,Pham Van Duc,p.duc@hanoi-electronics.vn,8,8
 18,Renault Components SAS,14,true,Sophie Leblanc,s.leblanc@renault-components.fr,11,22
 19,Yaskawa Robotics,19,true,Kenji Mori,k.mori@yaskawa-robotics.jp,4,13
-20,Chennai Electronics Ltd,52,false,Suresh Babu,s.babu@chennai-electronics.in,6,16
+20,Chennai Electronics Ltd,52,false,Suresh Babu,s.babu@chennai-electronics.in,6,8
