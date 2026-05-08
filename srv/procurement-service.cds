@@ -8,7 +8,16 @@ service ProcurementService {
     entity VendorContracts  as projection on mydb.VendorContract;
     entity PurchaseOrders   as projection on mydb.PurchaseOrder;
     entity VendorQuote      as projection on mydb.VendorQuote;
-    entity KPIprofile       as projection on mydb.KPI_profile;
+    entity KPIprofile as select from mydb.KPI_profile {
+    kpi_id,
+    otif_score,
+    logistic_cost,
+    last_updated,
+    vendor.vendor_id    as vendor_id,
+    vendor.name         as vendor_name,
+    vendor.risk_rating  as vendor_risk_rating,
+    vendor.is_compliant as vendor_is_compliant
+    };
     entity ProcurementRequest as projection on mydb.ProcurementRequest;
     entity ApprovalLog as projection on mydb.ApprovalLog;
     entity PlannerComment as projection on mydb.PlannerComment;
