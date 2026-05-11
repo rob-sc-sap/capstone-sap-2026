@@ -29,6 +29,7 @@ entity Vendor {
       contact_name  : String(45);
       contact_email : String(100);
       country       : Association to Country;
+      product       : Association to Product;
 }
 
 entity VendorContract {
