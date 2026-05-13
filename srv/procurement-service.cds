@@ -27,4 +27,5 @@ service ProcurementService {
     entity AgentContext as projection on mydb.AgentContext;
     entity AgentActionLog as projection on mydb.AgentActionLog;
     entity AgentActionReference as projection on mydb.AgentActionReference;
+    entity ProcurementIssue as projection on mydb.ProcurementIssue;
 }

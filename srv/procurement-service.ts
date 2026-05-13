@@ -1,5 +1,6 @@
 import cds from '@sap/cds';
 
+
 export default class ProcurementService extends cds.ApplicationService {
   async init() {
     const {
@@ -19,7 +20,7 @@ export default class ProcurementService extends cds.ApplicationService {
       DecisionOverride,
       AgentContext,
       AgentActionLog,
-      AgentActionReference
+      AgentActionReference, ProcurementIssue
     } = this.entities;
 
     // Products (product_id: Integer)
@@ -83,6 +84,13 @@ export default class ProcurementService extends cds.ApplicationService {
       if (req?.data && (req.data.request_id === undefined || req.data.request_id === null)) {
         const result = await SELECT.one.from(ProcurementRequest).columns('max(request_id) as maxId');
         req.data.request_id = (result?.maxId ?? 0) + 1;
+      }
+    });
+       // ProcurementIssue
+    this.before('CREATE', ProcurementIssue, async (req) => {
+      if (req?.data && (req.data.issue_id === undefined || req.data.issue_id === null)) {
+        const result = await SELECT.one.from(ProcurementIssue).columns('max(issue_id) as maxId');
+        req.data.issue_id = (result?.maxId ?? 0) + 1;
       }
     });
 
