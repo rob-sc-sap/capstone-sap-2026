@@ -1,4 +1,5 @@
 import cds from '@sap/cds';
+const LOG = cds.log('code', { label: 'code' })
 
 
 export default class ProcurementService extends cds.ApplicationService {
@@ -164,6 +165,28 @@ export default class ProcurementService extends cds.ApplicationService {
         const result = await SELECT.one.from(AgentActionReference).columns('max(reference_id) as maxId');
         req.data.reference_id = (result?.maxId ?? 0) + 1;
       }
+    });
+
+    this.on('ResetProcurementRequests', async (req) => {
+      try {
+        await DELETE.from(ProcurementRequest);
+        return true;
+      } catch (error) {
+        LOG.info('Error resetting procurement requests', error);
+        return false;
+      }
+      
+    });
+
+    this.on('ResetProcurementIssues', async (req) => {
+      try {
+        await DELETE.from(ProcurementIssue);
+        return true;
+      } catch (error) {
+        LOG.info('Error resetting procurement issues', error);
+        return false;
+      }
+      
     });
 
     return super.init();

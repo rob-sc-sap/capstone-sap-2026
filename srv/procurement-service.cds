@@ -28,4 +28,6 @@ service ProcurementService {
     entity AgentActionLog as projection on mydb.AgentActionLog;
     entity AgentActionReference as projection on mydb.AgentActionReference;
     entity ProcurementIssue as projection on mydb.ProcurementIssue;
+    action ResetProcurementRequests() returns Boolean;
+    action ResetProcurementIssues() returns Boolean;
 }

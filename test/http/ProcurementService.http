@@ -16,32 +16,32 @@ Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "product_id": 23804641,
-  "name": "name-23804641",
-  "category": "category-23804641",
-  "safety_stock_level": 69.5550940829641,
-  "current_stock_level": 80.59325257779781
+  "product_id": 6874518,
+  "name": "name-6874518",
+  "category": "category-6874518",
+  "safety_stock_level": 44.607606119568835,
+  "current_stock_level": 52.88955616597555
 }
 
 
 ### Products
 # @name Products_PATCH
-PATCH {{server}}/odata/v4/procurement/Products/23804641
+PATCH {{server}}/odata/v4/procurement/Products/6874518
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "product_id": 23804641,
-  "name": "name-23804641",
-  "category": "category-23804641",
-  "safety_stock_level": 69.5550940829641,
-  "current_stock_level": 80.59325257779781
+  "product_id": 6874518,
+  "name": "name-6874518",
+  "category": "category-6874518",
+  "safety_stock_level": 44.607606119568835,
+  "current_stock_level": 52.88955616597555
 }
 
 
 ### Products
 # @name Products_DELETE
-DELETE {{server}}/odata/v4/procurement/Products/23804641
+DELETE {{server}}/odata/v4/procurement/Products/6874518
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
@@ -59,36 +59,46 @@ Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "vendor_id": 25653935,
-  "name": "name-25653935",
-  "risk_rating": 79,
+  "vendor_id": 26844173,
+  "name": "name-26844173",
+  "risk_rating": 6,
   "is_compliant": false,
+  "contact_name": "contact_name-26844173",
+  "contact_email": "contact_email-26844173",
   "country": {
-    "country_id": 8805397
+    "country_id": 741019
+  },
+  "product": {
+    "product_id": 6874518
   }
 }
 
 
 ### Vendors
 # @name Vendors_PATCH
-PATCH {{server}}/odata/v4/procurement/Vendors/25653935
+PATCH {{server}}/odata/v4/procurement/Vendors/26844173
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "vendor_id": 25653935,
-  "name": "name-25653935",
-  "risk_rating": 79,
+  "vendor_id": 26844173,
+  "name": "name-26844173",
+  "risk_rating": 6,
   "is_compliant": false,
+  "contact_name": "contact_name-26844173",
+  "contact_email": "contact_email-26844173",
   "country": {
-    "country_id": 8805397
+    "country_id": 741019
+  },
+  "product": {
+    "product_id": 6874518
   }
 }
 
 
 ### Vendors
 # @name Vendors_DELETE
-DELETE {{server}}/odata/v4/procurement/Vendors/25653935
+DELETE {{server}}/odata/v4/procurement/Vendors/26844173
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
@@ -106,26 +116,26 @@ Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "country_id": 8805397,
-  "country_name": "country_name-8805397"
+  "country_id": 741019,
+  "country_name": "country_name-741019"
 }
 
 
 ### Countries
 # @name Countries_PATCH
-PATCH {{server}}/odata/v4/procurement/Countries/8805397
+PATCH {{server}}/odata/v4/procurement/Countries/741019
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "country_id": 8805397,
-  "country_name": "country_name-8805397"
+  "country_id": 741019,
+  "country_name": "country_name-741019"
 }
 
 
 ### Countries
 # @name Countries_DELETE
-DELETE {{server}}/odata/v4/procurement/Countries/8805397
+DELETE {{server}}/odata/v4/procurement/Countries/741019
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
@@ -143,42 +153,42 @@ Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "tariff_id": 12610623,
-  "current_tariff_rate": 95.3396370016565,
-  "effective_date": "2019-07-01T00:00:00.000Z",
-  "expiring_date": "2019-01-17T00:00:00.000Z",
+  "tariff_id": 27256921,
+  "current_tariff_rate": 85.21208996646858,
+  "effective_date": "2010-12-23T00:00:00.000Z",
+  "expiring_date": "2022-10-04T00:00:00.000Z",
   "country": {
-    "country_id": 8805397
+    "country_id": 741019
   },
   "product": {
-    "product_id": 23804641
+    "product_id": 6874518
   }
 }
 
 
 ### Tariffs
 # @name Tariffs_PATCH
-PATCH {{server}}/odata/v4/procurement/Tariffs/12610623
+PATCH {{server}}/odata/v4/procurement/Tariffs/27256921
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "tariff_id": 12610623,
-  "current_tariff_rate": 95.3396370016565,
-  "effective_date": "2019-07-01T00:00:00.000Z",
-  "expiring_date": "2019-01-17T00:00:00.000Z",
+  "tariff_id": 27256921,
+  "current_tariff_rate": 85.21208996646858,
+  "effective_date": "2010-12-23T00:00:00.000Z",
+  "expiring_date": "2022-10-04T00:00:00.000Z",
   "country": {
-    "country_id": 8805397
+    "country_id": 741019
   },
   "product": {
-    "product_id": 23804641
+    "product_id": 6874518
   }
 }
 
 
 ### Tariffs
 # @name Tariffs_DELETE
-DELETE {{server}}/odata/v4/procurement/Tariffs/12610623
+DELETE {{server}}/odata/v4/procurement/Tariffs/27256921
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
@@ -196,46 +206,46 @@ Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "contract_id": 4012976,
-  "start_date": "2002-01-31T00:00:00.000Z",
-  "end_date": "2003-04-02T00:00:00.000Z",
-  "minimum_order_quantity": 66,
-  "volume_discount_tiers": "volume_discount_tiers-4012976",
-  "penalty_clause": "penalty_clause-4012976",
+  "contract_id": 8690223,
+  "start_date": "2011-07-30T00:00:00.000Z",
+  "end_date": "2010-06-11T00:00:00.000Z",
+  "minimum_order_quantity": 51,
+  "volume_discount_tiers": "volume_discount_tiers-8690223",
+  "penalty_clause": "penalty_clause-8690223",
   "vendor": {
-    "vendor_id": 25653935
+    "vendor_id": 26844173
   },
   "product": {
-    "product_id": 23804641
+    "product_id": 6874518
   }
 }
 
 
 ### VendorContracts
 # @name VendorContracts_PATCH
-PATCH {{server}}/odata/v4/procurement/VendorContracts/4012976
+PATCH {{server}}/odata/v4/procurement/VendorContracts/8690223
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "contract_id": 4012976,
-  "start_date": "2002-01-31T00:00:00.000Z",
-  "end_date": "2003-04-02T00:00:00.000Z",
-  "minimum_order_quantity": 66,
-  "volume_discount_tiers": "volume_discount_tiers-4012976",
-  "penalty_clause": "penalty_clause-4012976",
+  "contract_id": 8690223,
+  "start_date": "2011-07-30T00:00:00.000Z",
+  "end_date": "2010-06-11T00:00:00.000Z",
+  "minimum_order_quantity": 51,
+  "volume_discount_tiers": "volume_discount_tiers-8690223",
+  "penalty_clause": "penalty_clause-8690223",
   "vendor": {
-    "vendor_id": 25653935
+    "vendor_id": 26844173
   },
   "product": {
-    "product_id": 23804641
+    "product_id": 6874518
   }
 }
 
 
 ### VendorContracts
 # @name VendorContracts_DELETE
-DELETE {{server}}/odata/v4/procurement/VendorContracts/4012976
+DELETE {{server}}/odata/v4/procurement/VendorContracts/8690223
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
@@ -253,48 +263,54 @@ Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "po_id": 29822186,
-  "received_date": "2023-12-22T00:00:00.000Z",
-  "product_quantity": 81,
-  "po_total": 77.4900983686462,
+  "po_id": 12460015,
+  "status": "status-12460015",
+  "expected_delivery_date": "2002-10-30T00:00:00.000Z",
+  "received_date": "2022-04-01T00:00:00.000Z",
+  "disruption_reason": "disruption_reason-12460015",
+  "product_quantity": 3,
+  "po_total": 78.00335112771533,
   "allocation": {
-    "allocation_id": 27916859
+    "allocation_id": 18507107
   },
   "product": {
-    "product_id": 23804641
+    "product_id": 6874518
   },
   "vendor": {
-    "vendor_id": 25653935
+    "vendor_id": 26844173
   }
 }
 
 
 ### PurchaseOrders
 # @name PurchaseOrders_PATCH
-PATCH {{server}}/odata/v4/procurement/PurchaseOrders/29822186
+PATCH {{server}}/odata/v4/procurement/PurchaseOrders/12460015
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "po_id": 29822186,
-  "received_date": "2023-12-22T00:00:00.000Z",
-  "product_quantity": 81,
-  "po_total": 77.4900983686462,
+  "po_id": 12460015,
+  "status": "status-12460015",
+  "expected_delivery_date": "2002-10-30T00:00:00.000Z",
+  "received_date": "2022-04-01T00:00:00.000Z",
+  "disruption_reason": "disruption_reason-12460015",
+  "product_quantity": 3,
+  "po_total": 78.00335112771533,
   "allocation": {
-    "allocation_id": 27916859
+    "allocation_id": 18507107
   },
   "product": {
-    "product_id": 23804641
+    "product_id": 6874518
   },
   "vendor": {
-    "vendor_id": 25653935
+    "vendor_id": 26844173
   }
 }
 
 
 ### PurchaseOrders
 # @name PurchaseOrders_DELETE
-DELETE {{server}}/odata/v4/procurement/PurchaseOrders/29822186
+DELETE {{server}}/odata/v4/procurement/PurchaseOrders/12460015
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
@@ -312,52 +328,52 @@ Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "allocation_id": 27916859,
-  "allocated_quantity": 68,
-  "total_effective_cost": 71.78617901827228,
-  "rationale_summary": "rationale_summary-27916859",
-  "created_at": "2003-04-17T00:00:00.000Z",
+  "allocation_id": 18507107,
+  "allocated_quantity": 28,
+  "total_effective_cost": 56.388744158563064,
+  "rationale_summary": "rationale_summary-18507107",
+  "created_at": "2015-07-05T00:00:00.000Z",
   "suggested_by_agent": false,
   "scenario": {
-    "scenario_id": 17753416
+    "scenario_id": 21660383
   },
   "vendor": {
-    "vendor_id": 25653935
+    "vendor_id": 26844173
   },
   "product": {
-    "product_id": 23804641
+    "product_id": 6874518
   }
 }
 
 
 ### AllocationResult
 # @name AllocationResult_PATCH
-PATCH {{server}}/odata/v4/procurement/AllocationResult/27916859
+PATCH {{server}}/odata/v4/procurement/AllocationResult/18507107
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "allocation_id": 27916859,
-  "allocated_quantity": 68,
-  "total_effective_cost": 71.78617901827228,
-  "rationale_summary": "rationale_summary-27916859",
-  "created_at": "2003-04-17T00:00:00.000Z",
+  "allocation_id": 18507107,
+  "allocated_quantity": 28,
+  "total_effective_cost": 56.388744158563064,
+  "rationale_summary": "rationale_summary-18507107",
+  "created_at": "2015-07-05T00:00:00.000Z",
   "suggested_by_agent": false,
   "scenario": {
-    "scenario_id": 17753416
+    "scenario_id": 21660383
   },
   "vendor": {
-    "vendor_id": 25653935
+    "vendor_id": 26844173
   },
   "product": {
-    "product_id": 23804641
+    "product_id": 6874518
   }
 }
 
 
 ### AllocationResult
 # @name AllocationResult_DELETE
-DELETE {{server}}/odata/v4/procurement/AllocationResult/27916859
+DELETE {{server}}/odata/v4/procurement/AllocationResult/18507107
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
@@ -375,44 +391,44 @@ Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "scenario_id": 17753416,
-  "tariff_multiplier": 88.42900451957246,
-  "capacity_delta": 79.43577852823547,
-  "objective_function": "objective_function-17753416",
-  "created_at": "2012-09-10T00:00:00.000Z",
+  "scenario_id": 21660383,
+  "tariff_multiplier": 30.388932101678613,
+  "capacity_delta": 29.094488055163886,
+  "objective_function": "objective_function-21660383",
+  "created_at": "2013-04-29T00:00:00.000Z",
   "request": {
-    "request_id": 9781703
+    "request_id": 6340548
   },
   "quote": {
-    "quote_id": 19260953
+    "quote_id": 18814871
   }
 }
 
 
 ### OptimizationScenario
 # @name OptimizationScenario_PATCH
-PATCH {{server}}/odata/v4/procurement/OptimizationScenario/17753416
+PATCH {{server}}/odata/v4/procurement/OptimizationScenario/21660383
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "scenario_id": 17753416,
-  "tariff_multiplier": 88.42900451957246,
-  "capacity_delta": 79.43577852823547,
-  "objective_function": "objective_function-17753416",
-  "created_at": "2012-09-10T00:00:00.000Z",
+  "scenario_id": 21660383,
+  "tariff_multiplier": 30.388932101678613,
+  "capacity_delta": 29.094488055163886,
+  "objective_function": "objective_function-21660383",
+  "created_at": "2013-04-29T00:00:00.000Z",
   "request": {
-    "request_id": 9781703
+    "request_id": 6340548
   },
   "quote": {
-    "quote_id": 19260953
+    "quote_id": 18814871
   }
 }
 
 
 ### OptimizationScenario
 # @name OptimizationScenario_DELETE
-DELETE {{server}}/odata/v4/procurement/OptimizationScenario/17753416
+DELETE {{server}}/odata/v4/procurement/OptimizationScenario/21660383
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
@@ -430,38 +446,38 @@ Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "request_id": 9781703,
-  "requested_qty": 94,
-  "status": "us-9781703",
-  "raised_by": "raised_by-9781703",
-  "created_at": "2008-05-10T00:00:00.000Z",
+  "request_id": 6340548,
+  "requested_qty": 96,
+  "status": "us-6340548",
+  "raised_by": "raised_by-6340548",
+  "created_at": "2014-02-22T00:00:00.000Z",
   "product": {
-    "product_id": 23804641
+    "product_id": 6874518
   }
 }
 
 
 ### ProcurementRequest
 # @name ProcurementRequest_PATCH
-PATCH {{server}}/odata/v4/procurement/ProcurementRequest/9781703
+PATCH {{server}}/odata/v4/procurement/ProcurementRequest/6340548
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "request_id": 9781703,
-  "requested_qty": 94,
-  "status": "us-9781703",
-  "raised_by": "raised_by-9781703",
-  "created_at": "2008-05-10T00:00:00.000Z",
+  "request_id": 6340548,
+  "requested_qty": 96,
+  "status": "us-6340548",
+  "raised_by": "raised_by-6340548",
+  "created_at": "2014-02-22T00:00:00.000Z",
   "product": {
-    "product_id": 23804641
+    "product_id": 6874518
   }
 }
 
 
 ### ProcurementRequest
 # @name ProcurementRequest_DELETE
-DELETE {{server}}/odata/v4/procurement/ProcurementRequest/9781703
+DELETE {{server}}/odata/v4/procurement/ProcurementRequest/6340548
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
@@ -479,50 +495,50 @@ Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "quote_id": 19260953,
-  "unit_price": 48.26794620723114,
-  "capacity_limit": 47,
-  "lead_time_days": 4,
-  "currency": "currency-19260953",
+  "quote_id": 18814871,
+  "unit_price": 28.63958515050492,
+  "capacity_limit": 43,
+  "lead_time_days": 98,
+  "currency": "currency-18814871",
   "vendor": {
-    "vendor_id": 25653935
+    "vendor_id": 26844173
   },
   "contract": {
-    "contract_id": 4012976
+    "contract_id": 8690223
   },
   "product": {
-    "product_id": 23804641
+    "product_id": 6874518
   }
 }
 
 
 ### VendorQuote
 # @name VendorQuote_PATCH
-PATCH {{server}}/odata/v4/procurement/VendorQuote/19260953
+PATCH {{server}}/odata/v4/procurement/VendorQuote/18814871
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "quote_id": 19260953,
-  "unit_price": 48.26794620723114,
-  "capacity_limit": 47,
-  "lead_time_days": 4,
-  "currency": "currency-19260953",
+  "quote_id": 18814871,
+  "unit_price": 28.63958515050492,
+  "capacity_limit": 43,
+  "lead_time_days": 98,
+  "currency": "currency-18814871",
   "vendor": {
-    "vendor_id": 25653935
+    "vendor_id": 26844173
   },
   "contract": {
-    "contract_id": 4012976
+    "contract_id": 8690223
   },
   "product": {
-    "product_id": 23804641
+    "product_id": 6874518
   }
 }
 
 
 ### VendorQuote
 # @name VendorQuote_DELETE
-DELETE {{server}}/odata/v4/procurement/VendorQuote/19260953
+DELETE {{server}}/odata/v4/procurement/VendorQuote/18814871
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
@@ -540,42 +556,38 @@ Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "kpi_id": 18744073,
-  "otif_score": 56.75432687726283,
-  "logistic_cost": 79.74594761032154,
-  "last_updated": "2001-06-16T00:00:00.000Z",
-  "vendor": {
-    "vendor_id": 25653935
-  },
-  "tariff": {
-    "tariff_id": 12610623
-  }
+  "kpi_id": 11475596,
+  "otif_score": 53.30896325013441,
+  "logistic_cost": 54.519194807885754,
+  "last_updated": "2004-11-29T00:00:00.000Z",
+  "vendor_id": 8,
+  "vendor_name": "vendor_name-11475596",
+  "vendor_risk_rating": 34,
+  "vendor_is_compliant": true
 }
 
 
 ### KPIprofile
 # @name KPIprofile_PATCH
-PATCH {{server}}/odata/v4/procurement/KPIprofile/18744073
+PATCH {{server}}/odata/v4/procurement/KPIprofile/11475596
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "kpi_id": 18744073,
-  "otif_score": 56.75432687726283,
-  "logistic_cost": 79.74594761032154,
-  "last_updated": "2001-06-16T00:00:00.000Z",
-  "vendor": {
-    "vendor_id": 25653935
-  },
-  "tariff": {
-    "tariff_id": 12610623
-  }
+  "kpi_id": 11475596,
+  "otif_score": 53.30896325013441,
+  "logistic_cost": 54.519194807885754,
+  "last_updated": "2004-11-29T00:00:00.000Z",
+  "vendor_id": 8,
+  "vendor_name": "vendor_name-11475596",
+  "vendor_risk_rating": 34,
+  "vendor_is_compliant": true
 }
 
 
 ### KPIprofile
 # @name KPIprofile_DELETE
-DELETE {{server}}/odata/v4/procurement/KPIprofile/18744073
+DELETE {{server}}/odata/v4/procurement/KPIprofile/11475596
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
@@ -593,38 +605,38 @@ Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "log_id": 27624830,
-  "stage": "stage-27624830",
-  "actor_role": "actor_role-27624830",
-  "decision": "n-27624830",
-  "decided_at": "2022-12-24T00:00:00.000Z",
+  "log_id": 25305303,
+  "stage": "stage-25305303",
+  "actor_role": "actor_role-25305303",
+  "decision": "n-25305303",
+  "decided_at": "2022-07-18T00:00:00.000Z",
   "request": {
-    "request_id": 9781703
+    "request_id": 6340548
   }
 }
 
 
 ### ApprovalLog
 # @name ApprovalLog_PATCH
-PATCH {{server}}/odata/v4/procurement/ApprovalLog/27624830
+PATCH {{server}}/odata/v4/procurement/ApprovalLog/25305303
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "log_id": 27624830,
-  "stage": "stage-27624830",
-  "actor_role": "actor_role-27624830",
-  "decision": "n-27624830",
-  "decided_at": "2022-12-24T00:00:00.000Z",
+  "log_id": 25305303,
+  "stage": "stage-25305303",
+  "actor_role": "actor_role-25305303",
+  "decision": "n-25305303",
+  "decided_at": "2022-07-18T00:00:00.000Z",
   "request": {
-    "request_id": 9781703
+    "request_id": 6340548
   }
 }
 
 
 ### ApprovalLog
 # @name ApprovalLog_DELETE
-DELETE {{server}}/odata/v4/procurement/ApprovalLog/27624830
+DELETE {{server}}/odata/v4/procurement/ApprovalLog/25305303
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
@@ -642,54 +654,54 @@ Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "comment_id": 25427983,
-  "author_id": "author_id-25427983",
-  "text_content": "text_content-25427983",
-  "created_at": "2002-12-30T00:00:00.000Z",
+  "comment_id": 8889495,
+  "author_id": "author_id-8889495",
+  "text_content": "text_content-8889495",
+  "created_at": "2016-06-12T00:00:00.000Z",
   "approval_log": {
-    "log_id": 27624830
+    "log_id": 25305303
   },
   "contract": {
-    "contract_id": 4012976
+    "contract_id": 8690223
   },
   "request": {
-    "request_id": 9781703
+    "request_id": 6340548
   },
   "vendor": {
-    "vendor_id": 25653935
+    "vendor_id": 26844173
   }
 }
 
 
 ### PlannerComment
 # @name PlannerComment_PATCH
-PATCH {{server}}/odata/v4/procurement/PlannerComment/25427983
+PATCH {{server}}/odata/v4/procurement/PlannerComment/8889495
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "comment_id": 25427983,
-  "author_id": "author_id-25427983",
-  "text_content": "text_content-25427983",
-  "created_at": "2002-12-30T00:00:00.000Z",
+  "comment_id": 8889495,
+  "author_id": "author_id-8889495",
+  "text_content": "text_content-8889495",
+  "created_at": "2016-06-12T00:00:00.000Z",
   "approval_log": {
-    "log_id": 27624830
+    "log_id": 25305303
   },
   "contract": {
-    "contract_id": 4012976
+    "contract_id": 8690223
   },
   "request": {
-    "request_id": 9781703
+    "request_id": 6340548
   },
   "vendor": {
-    "vendor_id": 25653935
+    "vendor_id": 26844173
   }
 }
 
 
 ### PlannerComment
 # @name PlannerComment_DELETE
-DELETE {{server}}/odata/v4/procurement/PlannerComment/25427983
+DELETE {{server}}/odata/v4/procurement/PlannerComment/8889495
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
@@ -707,38 +719,38 @@ Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "override_id": 7481734,
-  "overridden_by": "overridden_by-7481734",
-  "new_quantity": 55,
-  "created_at": "2013-12-14T00:00:00.000Z",
-  "reason_code": "reason_code-7481734",
+  "override_id": 11584810,
+  "overridden_by": "overridden_by-11584810",
+  "new_quantity": 13,
+  "created_at": "2003-10-22T00:00:00.000Z",
+  "reason_code": "reason_code-11584810",
   "allocation": {
-    "allocation_id": 27916859
+    "allocation_id": 18507107
   }
 }
 
 
 ### DecisionOverride
 # @name DecisionOverride_PATCH
-PATCH {{server}}/odata/v4/procurement/DecisionOverride/7481734
+PATCH {{server}}/odata/v4/procurement/DecisionOverride/11584810
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "override_id": 7481734,
-  "overridden_by": "overridden_by-7481734",
-  "new_quantity": 55,
-  "created_at": "2013-12-14T00:00:00.000Z",
-  "reason_code": "reason_code-7481734",
+  "override_id": 11584810,
+  "overridden_by": "overridden_by-11584810",
+  "new_quantity": 13,
+  "created_at": "2003-10-22T00:00:00.000Z",
+  "reason_code": "reason_code-11584810",
   "allocation": {
-    "allocation_id": 27916859
+    "allocation_id": 18507107
   }
 }
 
 
 ### DecisionOverride
 # @name DecisionOverride_DELETE
-DELETE {{server}}/odata/v4/procurement/DecisionOverride/7481734
+DELETE {{server}}/odata/v4/procurement/DecisionOverride/11584810
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
@@ -756,36 +768,36 @@ Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "session_id": 17770518,
-  "active_constraints": "active_constraints-17770518",
-  "last_action": "last_action-17770518",
-  "updated_at": "2010-06-13T00:00:00.000Z",
+  "session_id": 9953295,
+  "active_constraints": "active_constraints-9953295",
+  "last_action": "last_action-9953295",
+  "updated_at": "2007-02-07T00:00:00.000Z",
   "request": {
-    "request_id": 9781703
+    "request_id": 6340548
   }
 }
 
 
 ### AgentContext
 # @name AgentContext_PATCH
-PATCH {{server}}/odata/v4/procurement/AgentContext/17770518
+PATCH {{server}}/odata/v4/procurement/AgentContext/9953295
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "session_id": 17770518,
-  "active_constraints": "active_constraints-17770518",
-  "last_action": "last_action-17770518",
-  "updated_at": "2010-06-13T00:00:00.000Z",
+  "session_id": 9953295,
+  "active_constraints": "active_constraints-9953295",
+  "last_action": "last_action-9953295",
+  "updated_at": "2007-02-07T00:00:00.000Z",
   "request": {
-    "request_id": 9781703
+    "request_id": 6340548
   }
 }
 
 
 ### AgentContext
 # @name AgentContext_DELETE
-DELETE {{server}}/odata/v4/procurement/AgentContext/17770518
+DELETE {{server}}/odata/v4/procurement/AgentContext/9953295
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
@@ -803,36 +815,36 @@ Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "action_id": 4657004,
-  "action_type": "action_type-4657004",
-  "status": "us-4657004",
-  "timestamp": "2013-04-10T00:00:00.000Z",
+  "action_id": 24801053,
+  "action_type": "action_type-24801053",
+  "status": "s-24801053",
+  "timestamp": "2009-10-23T00:00:00.000Z",
   "context": {
-    "session_id": 17770518
+    "session_id": 9953295
   }
 }
 
 
 ### AgentActionLog
 # @name AgentActionLog_PATCH
-PATCH {{server}}/odata/v4/procurement/AgentActionLog/4657004
+PATCH {{server}}/odata/v4/procurement/AgentActionLog/24801053
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "action_id": 4657004,
-  "action_type": "action_type-4657004",
-  "status": "us-4657004",
-  "timestamp": "2013-04-10T00:00:00.000Z",
+  "action_id": 24801053,
+  "action_type": "action_type-24801053",
+  "status": "s-24801053",
+  "timestamp": "2009-10-23T00:00:00.000Z",
   "context": {
-    "session_id": 17770518
+    "session_id": 9953295
   }
 }
 
 
 ### AgentActionLog
 # @name AgentActionLog_DELETE
-DELETE {{server}}/odata/v4/procurement/AgentActionLog/4657004
+DELETE {{server}}/odata/v4/procurement/AgentActionLog/24801053
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
@@ -850,39 +862,105 @@ Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "reference_id": 28006904,
-  "direction": "n-28006904",
-  "ref_type": "ref_type-28006904",
-  "ref_id": "ref_id-28006904",
-  "snapshot_data": "snapshot_data-28006904",
-  "created_at": "2007-07-30T00:00:00.000Z",
+  "reference_id": 27711218,
+  "direction": "n-27711218",
+  "ref_type": "ref_type-27711218",
+  "ref_id": "ref_id-27711218",
+  "snapshot_data": "snapshot_data-27711218",
+  "created_at": "2023-02-08T00:00:00.000Z",
   "action": {
-    "action_id": 4657004
+    "action_id": 24801053
   }
 }
 
 
 ### AgentActionReference
 # @name AgentActionReference_PATCH
-PATCH {{server}}/odata/v4/procurement/AgentActionReference/28006904
+PATCH {{server}}/odata/v4/procurement/AgentActionReference/27711218
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "reference_id": 28006904,
-  "direction": "n-28006904",
-  "ref_type": "ref_type-28006904",
-  "ref_id": "ref_id-28006904",
-  "snapshot_data": "snapshot_data-28006904",
-  "created_at": "2007-07-30T00:00:00.000Z",
+  "reference_id": 27711218,
+  "direction": "n-27711218",
+  "ref_type": "ref_type-27711218",
+  "ref_id": "ref_id-27711218",
+  "snapshot_data": "snapshot_data-27711218",
+  "created_at": "2023-02-08T00:00:00.000Z",
   "action": {
-    "action_id": 4657004
+    "action_id": 24801053
   }
 }
 
 
 ### AgentActionReference
 # @name AgentActionReference_DELETE
-DELETE {{server}}/odata/v4/procurement/AgentActionReference/28006904
+DELETE {{server}}/odata/v4/procurement/AgentActionReference/27711218
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
+
+
+### ProcurementIssue
+# @name ProcurementIssue_GET
+GET {{server}}/odata/v4/procurement/ProcurementIssue
+Authorization: Basic {{username}}:{{password}}
+
+
+### ProcurementIssue
+# @name ProcurementIssue_POST
+POST {{server}}/odata/v4/procurement/ProcurementIssue
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "issue_id": 9272279,
+  "status": "status-9272279",
+  "description": "description-9272279",
+  "created_at": "2016-09-15T00:00:00.000Z",
+  "resolved_by": "by-9272279",
+  "notes": "notes-9272279",
+  "purchase_order": {
+    "po_id": 12460015
+  },
+  "vendor": {
+    "vendor_id": 26844173
+  }
+}
+
+
+### ProcurementIssue
+# @name ProcurementIssue_PATCH
+PATCH {{server}}/odata/v4/procurement/ProcurementIssue/9272279
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "issue_id": 9272279,
+  "status": "status-9272279",
+  "description": "description-9272279",
+  "created_at": "2016-09-15T00:00:00.000Z",
+  "resolved_by": "by-9272279",
+  "notes": "notes-9272279",
+  "purchase_order": {
+    "po_id": 12460015
+  },
+  "vendor": {
+    "vendor_id": 26844173
+  }
+}
+
+
+### ProcurementIssue
+# @name ProcurementIssue_DELETE
+DELETE {{server}}/odata/v4/procurement/ProcurementIssue/9272279
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### ResetProcurementRequests
+# @name ResetProcurementRequests_POST
+POST {{server}}/odata/v4/procurement/ResetProcurementRequests
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{}
