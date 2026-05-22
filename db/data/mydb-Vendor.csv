@@ -19,3 +19,24 @@ vendor_id,name,risk_rating,is_compliant,contact_name,contact_email,country_count
 18,Renault Components SAS,14,true,Sophie Leblanc,s.leblanc@renault-components.fr,11,18
 19,Yaskawa Robotics,19,true,Kenji Mori,k.mori@yaskawa-robotics.jp,4,19
 20,Chennai Electronics Ltd,52,false,Suresh Babu,s.babu@chennai-electronics.in,6,20
+21,Parker Hannifin Systems,12,true,Robert Steele,r.steele@parker-hannifin.com,2,6
+22,Bosch Rexroth GmbH,11,true,Thomas Bauer,t.bauer@bosch-rexroth.de,3,6
+23,Yuken Kogyo Co,16,true,Takeshi Abe,t.abe@yuken-kogyo.jp,4,6
+24,Samsung Display Corp,14,true,Min-jun Lee,m.lee@samsung-display.kr,5,8
+25,BOE Technology Group,29,true,Jian Wang,j.wang@boe-technology.com,1,8
+26,LG Display Co Ltd,13,true,Hyun-soo Choi,h.choi@lgdisplay.kr,5,8
+27,SEW-EURODRIVE GmbH,13,true,Andreas Wolf,a.wolf@sew-eurodrive.de,3,15
+28,Sumitomo Drive Tech,15,true,Noboru Fujita,n.fujita@sumitomo-drive.jp,4,15
+29,Dodge Automation Inc,18,true,James Whitfield,j.whitfield@dodge-automation.com,2,15
+30,Precision Toolworks Inc,14,true,Sandra Ortiz,s.ortiz@precision-toolworks.com,2,21
+31,HRS Flow GmbH,17,true,Markus Braun,m.braun@hrs-flow.de,3,21
+32,Shunde Mold Works,33,true,Zhi Li,z.li@shunde-mold.com,1,21
+33,Parker Seals Division,10,true,Laura Mitchell,l.mitchell@parker-seals.com,2,25
+34,Freudenberg SE,12,true,Hans-Peter Koch,h.koch@freudenberg.de,3,25
+35,NOK Corporation,15,true,Satoshi Yamamoto,s.yamamoto@nok-corp.jp,4,25
+36,Kimberly-Clark Corp,12,true,Patricia Nguyen,p.nguyen@kimberly-clark.com,2,26
+37,Essity Europe GmbH,14,true,Stefan Richter,s.richter@essity-europe.de,3,26
+38,Procter & Gamble Co,11,true,Amanda Torres,a.torres@pg.com,2,27
+39,Daio Paper Corp,16,true,Yuki Nakamura,y.nakamura@daio-paper.jp,4,27
+40,MagicFiber Co Ltd,22,true,Fang Zhou,f.zhou@magicfiber.cn,1,28
+41,Premium Tissue SAS,18,true,Claire Dupont,c.dupont@premium-tissue.fr,11,28
