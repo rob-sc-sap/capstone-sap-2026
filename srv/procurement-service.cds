@@ -30,16 +30,25 @@ service ProcurementService {
         end as criticality : Integer
     };
     entity VendorQuote      as projection on mydb.VendorQuote;
-    entity KPIprofile as select from mydb.KPI_profile {
-    kpi_id,
+    @odata.draft.enabled
+entity KPIprofile as select from mydb.KPI_profile {
+    key kpi_id,
     otif_score,
     logistic_cost,
     last_updated,
+    vendor,
     vendor.vendor_id    as vendor_id,
     vendor.name         as vendor_name,
     vendor.risk_rating  as vendor_risk_rating,
-    vendor.is_compliant as vendor_is_compliant
-    };
+    vendor.is_compliant as vendor_is_compliant,
+    case
+        when otif_score < 90              then 1 
+        when vendor.risk_rating  > 40     then 1 
+        when logistic_cost       > 1.0    then 1
+        when vendor.is_compliant == false  then 1  
+        else 0
+    end as criticality : Integer
+};
     @odata.draft.enabled
     entity ProcurementRequest as projection on mydb.ProcurementRequest;
     entity ApprovalLog as projection on mydb.ApprovalLog;
