@@ -5,6 +5,7 @@ namespace mydb;
 // -------------------------------------------------------
 
 entity Product {
+  @Common.Label : 'Product ID'
   key product_id         : Integer;
       name               : String(45) not null;
       category           : String(45);
@@ -146,6 +147,7 @@ entity DecisionOverride {
 }
 
 entity PurchaseOrder {
+  @Common.Label : 'Purchase Order ID'
   key po_id                  : Integer;
       status                 : String(15);  // active | delayed | cancelled | resolved
       po_pdf                 : LargeBinary;

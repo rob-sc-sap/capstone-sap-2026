@@ -23,14 +23,18 @@
   },
   "scripts": {
     "start": "cds-serve",
-    "watch-project1": "cds watch --open project1/index.html?sap-ui-xx-viewCache=false --livereload false"
+    "watch-project1": "cds watch --open project1/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-products1": "cds watch --open products1/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-purchaseorders1": "cds watch --open purchaseorders1/index.html?sap-ui-xx-viewCache=false --livereload false"
   },
   "private": true,
   "workspaces": [
     "app/*"
   ],
   "sapux": [
-    "app/project1"
+    "app/project1",
+    "app/products1",
+    "app/purchaseorders1"
   ],
   "cds": {
     "requires": {
