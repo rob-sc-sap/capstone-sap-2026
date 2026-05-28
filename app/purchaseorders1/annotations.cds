@@ -73,6 +73,7 @@ annotate service.PurchaseOrders with @(
             $Type : 'UI.DataField',
             Label : 'Purchase Order ID',
             Value : po_id,
+            Criticality : criticality,
         },
         {
             $Type : 'UI.DataField',

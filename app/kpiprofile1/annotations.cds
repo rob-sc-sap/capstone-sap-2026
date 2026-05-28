@@ -85,6 +85,7 @@ annotate service.KPIprofile with @(
             Label : 'KPI ID',
             Value : kpi_id,
             Criticality : criticality,
+            CriticalityRepresentation : #WithIcon,
         },
         {
             $Type : 'UI.DataField',
