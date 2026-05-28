@@ -1,3 +1,4 @@
+import { resolveDestination } from '@sap-cloud-sdk/connectivity/dist/internal';
 import cds from '@sap/cds';
 const LOG = cds.log('code', { label: 'code' })
 
@@ -85,6 +86,7 @@ export default class ProcurementService extends cds.ApplicationService {
       if (req?.data && (req.data.request_id === undefined || req.data.request_id === null)) {
         const result = await SELECT.one.from(ProcurementRequest).columns('max(request_id) as maxId');
         req.data.request_id = (result?.maxId ?? 0) + 1;
+        req.data.created_at= new Date().toISOString();
       }
     });
        // ProcurementIssue

@@ -2,8 +2,7 @@ using mydb from '../db/schema';
 
 
 service ProcurementService {
-    @odata.draft.enabled
-    @odata.draft.bypass
+ 
     entity Products         as projection on mydb.Product
     {
         *,
@@ -18,8 +17,7 @@ service ProcurementService {
     entity Countries        as projection on mydb.Country;
     entity Tariffs          as projection on mydb.Tariff;
     entity VendorContracts  as projection on mydb.VendorContract;
-    @odata.draft.enabled
-    @odata.draft.bypass
+  
     entity PurchaseOrders   as projection on mydb.PurchaseOrder
      {
         *,
@@ -32,8 +30,7 @@ service ProcurementService {
         end as criticality : Integer
     };
     entity VendorQuote      as projection on mydb.VendorQuote;
-    @odata.draft.enabled
-    @odata.draft.bypass
+ 
 entity KPIprofile as select from mydb.KPI_profile {
     key kpi_id,
     otif_score,
@@ -52,8 +49,7 @@ entity KPIprofile as select from mydb.KPI_profile {
         else 0
     end as criticality : Integer
 };
-    @odata.draft.enabled
-    @odata.draft.bypass
+
     entity ProcurementRequest as projection on mydb.ProcurementRequest;
     entity ApprovalLog as projection on mydb.ApprovalLog;
     entity PlannerComment as projection on mydb.PlannerComment;
@@ -63,8 +59,6 @@ entity KPIprofile as select from mydb.KPI_profile {
     entity AgentContext as projection on mydb.AgentContext;
     entity AgentActionLog as projection on mydb.AgentActionLog;
     entity AgentActionReference as projection on mydb.AgentActionReference;
-    @odata.draft.enabled
-    @odata.draft.bypass
     entity ProcurementIssue as projection on mydb.ProcurementIssue;
     action ResetProcurementRequests() returns Boolean;
     action ResetProcurementIssues() returns Boolean;
