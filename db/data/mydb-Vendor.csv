@@ -1,24 +1,24 @@
 vendor_id,name,risk_rating,is_compliant,contact_name,contact_email,country_country_id,product_product_id
 1,Shenzhen TechCore Ltd,25,true,Wei Zhang,w.zhang@shenzhen-techcore.com,1,1
-2,AutoParts Global GmbH,15,true,Klaus Hoffmann,k.hoffmann@autoparts-global.de,3,2
-3,Pacific Electronics Co,30,true,David Park,d.park@pacific-electronics.com,9,3
+2,AutoParts Global GmbH,15,true,Klaus Hoffmann,k.hoffmann@autoparts-global.de,3,9
+3,Pacific Electronics Co,30,true,David Park,d.park@pacific-electronics.com,9,8
 4,Vishay Industrial Supply,20,true,Anita Sharma,a.sharma@vishay-industrial.com,2,4
-5,Hanwha Precision Parts,22,true,Ji-woo Kim,j.kim@hanwha-precision.kr,5,5
-6,Tata Components Ltd,45,true,Ravi Menon,r.menon@tata-components.in,6,6
-7,Foxconn Assembly Works,35,true,Linda Chen,l.chen@foxconn-assembly.com,1,7
-8,Mitsui Materials Corp,18,true,Hiroshi Tanaka,h.tanaka@mitsui-materials.jp,4,8
+5,Hanwha Precision Parts,22,true,Ji-woo Kim,j.kim@hanwha-precision.kr,5,24
+6,Tata Components Ltd,45,true,Ravi Menon,r.menon@tata-components.in,6,20
+7,Foxconn Assembly Works,35,true,Linda Chen,l.chen@foxconn-assembly.com,1,16
+8,Mitsui Materials Corp,18,true,Hiroshi Tanaka,h.tanaka@mitsui-materials.jp,4,15
 9,Continental Suppliers AG,12,true,Eva Müller,e.muller@continental-suppliers.ch,3,9
-10,Delta Mfg Vietnam,55,false,Nguyen Thi Lan,n.lan@delta-mfg.vn,8,10
-11,Grupo Monterrey SA,40,true,Carlos Reyes,c.reyes@grupo-monterrey.mx,7,11
-12,Polskie Czesci SpZOO,28,true,Marek Kowalski,m.kowalski@polskie-czesci.pl,14,12
-13,Bangkok Industrial Co,50,false,Somchai Prateep,s.prateep@bangkok-industrial.th,13,13
-14,Embraer Materials,38,true,Fernanda Lima,f.lima@embraer-materials.br,10,14
-15,Ontario Alloys Inc,17,true,Michael Carter,m.carter@ontario-alloys.ca,12,15
+10,Delta Mfg Vietnam,55,false,Nguyen Thi Lan,n.lan@delta-mfg.vn,8,18
+11,Grupo Monterrey SA,40,true,Carlos Reyes,c.reyes@grupo-monterrey.mx,7,7
+12,Polskie Czesci SpZOO,28,true,Marek Kowalski,m.kowalski@polskie-czesci.pl,14,17
+13,Bangkok Industrial Co,50,false,Somchai Prateep,s.prateep@bangkok-industrial.th,13,22
+14,Embraer Materials,38,true,Fernanda Lima,f.lima@embraer-materials.br,10,23
+15,Ontario Alloys Inc,17,true,Michael Carter,m.carter@ontario-alloys.ca,12,4
 16,Istanbul Parts AS,62,false,Ahmet Yilmaz,a.yilmaz@istanbul-parts.tr,15,16
-17,Hanoi Electronics JSC,48,true,Pham Van Duc,p.duc@hanoi-electronics.vn,8,17
-18,Renault Components SAS,14,true,Sophie Leblanc,s.leblanc@renault-components.fr,11,18
-19,Yaskawa Robotics,19,true,Kenji Mori,k.mori@yaskawa-robotics.jp,4,19
-20,Chennai Electronics Ltd,52,false,Suresh Babu,s.babu@chennai-electronics.in,6,20
+17,Hanoi Electronics JSC,48,true,Pham Van Duc,p.duc@hanoi-electronics.vn,8,5
+18,Renault Components SAS,14,true,Sophie Leblanc,s.leblanc@renault-components.fr,11,2
+19,Yaskawa Robotics,19,true,Kenji Mori,k.mori@yaskawa-robotics.jp,4,13
+20,Chennai Electronics Ltd,52,false,Suresh Babu,s.babu@chennai-electronics.in,6,19
 21,Parker Hannifin Systems,12,true,Robert Steele,r.steele@parker-hannifin.com,2,6
 22,Bosch Rexroth GmbH,11,true,Thomas Bauer,t.bauer@bosch-rexroth.de,3,6
 23,Yuken Kogyo Co,16,true,Takeshi Abe,t.abe@yuken-kogyo.jp,4,6
