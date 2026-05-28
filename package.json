@@ -39,6 +39,9 @@
     "app/kpiprofile1"
   ],
   "cds": {
+    "fiori": {
+      "direct_crud": true
+    },
     "requires": {
       "db": {
         "[production]": {
