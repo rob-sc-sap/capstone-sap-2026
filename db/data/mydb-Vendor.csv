@@ -36,7 +36,7 @@ vendor_id,name,risk_rating,is_compliant,contact_name,contact_email,country_count
 35,NOK Corporation,15,true,Satoshi Yamamoto,s.yamamoto@nok-corp.jp,4,25
 36,Kimberly-Clark Corp,12,true,Patricia Nguyen,p.nguyen@kimberly-clark.com,2,26
 37,Essity Europe GmbH,14,true,Stefan Richter,s.richter@essity-europe.de,3,26
-38,Procter & Gamble Co,11,true,Amanda Torres,a.torres@pg.com,2,27
+38,Procter & Gamble Co,28,true,Amanda Torres,a.torres@pg.com,2,27
 39,Daio Paper Corp,16,true,Yuki Nakamura,y.nakamura@daio-paper.jp,4,27
-40,MagicFiber Co Ltd,22,true,Fang Zhou,f.zhou@magicfiber.cn,1,28
+40,MagicFiber Co Ltd,35,false,Fang Zhou,f.zhou@magicfiber.cn,1,28
 41,Premium Tissue SAS,18,true,Claire Dupont,c.dupont@premium-tissue.fr,11,28
