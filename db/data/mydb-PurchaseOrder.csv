@@ -17,5 +17,5 @@ po_id,status,po_pdf,expected_delivery_date,received_date,disruption_reason,produ
 16,active,,2025-07-16T00:00:00.000Z,2025-07-23T00:00:00.000Z,,1000,33280.00,19,16,16
 17,active,,2025-07-17T00:00:00.000Z,2025-07-24T00:00:00.000Z,,100,29500.00,20,17,17
 18,active,,2025-07-18T00:00:00.000Z,2025-07-25T00:00:00.000Z,,1500,19500.00,18,18,18
-19,cancelled,,2025-07-19T00:00:00.000Z,,Supplier contract dispute — order could not be fulfilled,400,112000.00,21,27,27
-20,delayed,,2025-07-20T00:00:00.000Z,2025-07-29T00:00:00.000Z,Manufacturing backlog caused shipment delay,300,54000.00,22,28,28
+19,cancelled,,2025-07-19T00:00:00.000Z,,Supplier contract dispute — order could not be fulfilled,400,112000.00,21,27,38
+20,delayed,,2025-07-20T00:00:00.000Z,2025-07-29T00:00:00.000Z,Manufacturing backlog caused shipment delay,300,54000.00,22,28,40
