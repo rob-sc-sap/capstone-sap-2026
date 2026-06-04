@@ -21,9 +21,9 @@ product_id,name,category,safety_stock_level,current_stock_level
 20,Stainless Steel Bolt M8,Raw Materials,800.0,1050.0
 21,Injection Mold Tool,Industrial Components,15.0,22.0
 22,Oxygen Sensor Lambda,Automotive,85.0,100.0
-23,Titanium Alloy Plate,Raw Materials,40.0,48.0
+23,Titanium Alloy Plate,Raw Materials,40.0,98.0
 24,CAN Bus Controller,Electronics,95.0,115.0
 25,Rubber Seal Kit,Industrial Components,220.0,275.0
-26,Soft Toilet Paper,Consumer Goods,500.0,650.0
-27,Ultra Soft Toilet Paper,Consumer Goods,400.0,280.0
-28,Magic Toilet Paper,Consumer Goods,300.0,180.0
+26,Soft Toilet Paper,Consumer Goods,220.0,650.0
+27,Ultra Soft Toilet Paper,Consumer Goods,100.0,0.0
+28,Magic Toilet Paper,Consumer Goods,120.0,0.0
